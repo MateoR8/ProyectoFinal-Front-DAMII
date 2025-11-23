@@ -1,0 +1,28 @@
+<div class="contenedor">
+    <h1>Incidencias Generales</h1>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th> ID </th>
+                    <th> Descripción </th>
+                    <th> Fecha Creacion</th>
+                    <th> Estado Incidencia </th>
+                    <th> Acciones </th>
+                </tr>
+            </thead>
+            <tbody id="tablaIncidencias">
+                <tr>
+                    <td>1</td>
+                    <td>Ejemplo de Descripcion</td>
+                    <td>Fecha de Creacion</td>
+                    <td>Estado de Incidencia</td>
+                    <td class="acciones">
+                        <button class="btn-editar" (click)="abrirVisualizar()">Ver</button>
+                        <button class="btn-eliminar" (click)="abrirEliminar()">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

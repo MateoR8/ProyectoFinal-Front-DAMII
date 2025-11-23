@@ -1,0 +1,47 @@
+<div class="login-container">
+    <div class="container">
+        <div class="left-section">
+            <h1 class="title">
+                <span class="title-conecta">Sistema de Incidencia</span> ADMINISTRADOR
+            </h1>
+
+            <!-- Asociamos el formulario -->
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input 
+                        type="text" 
+                        id="usuario" 
+                        formControlName="usuario" 
+                        placeholder="Ingrese su usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-wrapper">
+                        <input 
+                            [type]="showPassword ? 'text' : 'password'" 
+                            id="password" 
+                            formControlName="password" 
+                            placeholder="Ingrese su contraseña">
+                        <span 
+                            class="toggle-password" 
+                            (click)="togglePasswordVisibility()">
+                            {{ showPassword ? '🙈' : '👁️' }}
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Iniciar Sesión
+                </button>
+            </form>
+        </div>
+
+        <div class="right-section">
+            <div class="illustration-placeholder">
+                <img src="./assets/login.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="dialog">
+    <div class="dialog-header">
+        <h2>Detalles de la Incidencia Tecnica</h2>
+        <button class="btn-cerrar" (click)="cerrar()">&times;</button>
+    </div>
+
+    <div class="dialog-body">
+        <div class="campo-grupo">
+            <label>ID de Incidencia Tecnica</label>
+            <input type="text" value="#001" disabled>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Descripción</label>
+            <textarea disabled>Problema con el servidor principal que impide el acceso a los usuarios del sistema</textarea>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Fecha de Creación</label>
+            <input type="text" value="22/11/2025" disabled>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Estado de la Incidencia</label>
+            <select disabled>
+                <option>Activo</option>
+            </select>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Usuario Reportante</label>
+            <input type="text" value="Juan Pérez" disabled>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Prioridad</label>
+            <select disabled>
+                <option>Alta</option>
+            </select>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Categoría</label>
+            <input type="text" value="Infraestructura / Servidores" disabled>
+        </div>
+    </div>
+
+    <div class="dialog-footer">
+        <button class="btn-secundario" (click)="cerrar()">Cerrar</button>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="sidebar">
+    <div class="sidebar-content">
+        <div class="sidebar-header">
+            <div class="logo-icon"><img src="/assets/logo.svg"></div>
+            <div class="system-info">
+                <h2 class="system-title">Sistema de</h2>
+                <h1 class="system-name">Incidencias</h1>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <!-- GENERALES -->
+                <li class="nav-item">
+                    <a routerLink="/inc-general" routerLinkActive="active" class="nav-link"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        <span class="nav-icon"><img src="/assets/general.svg"></span>
+                        <span class="nav-text">Generales</span>
+                    </a>
+                </li>
+
+                <!-- TECNICAS -->
+                <li class="nav-item">
+                    <a routerLink="/inc-tecnica" routerLinkActive="active" class="nav-link"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        <span class="nav-icon"><img src="/assets/tecnicas.svg"></span>
+                        <span class="nav-text">Técnicas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="logout-btn" (click)="cerrarSession()">
+                <span class="logout-icon"><img src="/assets/logout.svg"></span>
+                <span class="logout-text">Cerrar Sesión</span>
+            </button>
+        </div>
+    </div>
+</div>

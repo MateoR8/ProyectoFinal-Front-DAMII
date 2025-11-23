@@ -1,0 +1,112 @@
+.dialog {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.dialog-header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-cerrar {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    padding: 0;
+}
+
+.btn-cerrar:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dialog-body {
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.icono-advertencia {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mensaje-confirmacion {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.mensaje-confirmacion strong {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.mensaje-advertencia {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.dialog-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-cancelar {
+    padding: 10px 25px;
+    border: 2px solid #95a5a6;
+    background: white;
+    color: #7f8c8d;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-eliminar {
+    padding: 10px 25px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background: #c0392b;
+}
