@@ -13,12 +13,12 @@
             </svg>
         </div>
         <p class="mensaje-confirmacion">
-            ¿Está seguro que desea eliminar la incidencia <strong>"Problema con el servidor principal"</strong>?
+            ¿Está seguro que desea eliminar la incidencia <strong>"{{data.incidencia.titulo}}"</strong>?
         </p>
     </div>
 
     <div class="dialog-footer">
         <button class="btn-cancelar" (click)="cerrar()">Cancelar</button>
-        <button class="btn-eliminar" (click)="cerrar()">Eliminar</button>
+        <button class="btn-eliminar" (click)="eliminarIncidencia(data.incidencia.id)">Eliminar</button>
     </div>
 </div>

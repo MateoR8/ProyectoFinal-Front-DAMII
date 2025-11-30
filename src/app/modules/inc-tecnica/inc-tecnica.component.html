@@ -4,7 +4,8 @@
         <table>
             <thead>
                 <tr>
-                    <th> ID </th>
+                    <th> Codigo </th>
+                    <th> Titulo </th>
                     <th> Descripción </th>
                     <th> Fecha Creacion</th>
                     <th> Estado Incidencia </th>
@@ -13,13 +14,15 @@
             </thead>
             <tbody id="tablaIncidencias">
                 <tr>
-                    <td>1</td>
-                    <td>Ejemplo de Descripcion</td>
-                    <td>Fecha de Creacion</td>
-                    <td>Estado de Incidencia</td>
+                <tr *ngFor="let incidencia of incidenciasTecnica">
+                    <td>{{incidencia.codigoIncidencia}}</td>
+                    <td>{{incidencia.titulo}}</td>
+                    <td>{{incidencia.descripcion}}</td>
+                    <td>{{incidencia.fechaCreacion}}</td>
+                    <td>{{incidencia.estadoIncidencia}}</td>
                     <td class="acciones">
-                        <button class="btn-editar" (click)="abrirVisualizar()">Ver</button>
-                        <button class="btn-eliminar" (click)="abrirEliminar()">Eliminar</button>
+                        <button class="btn-editar" (click)="abrirVisualizar(incidencia)">Ver</button>
+                        <button class="btn-eliminar" (click)="abrirEliminar(incidencia)">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

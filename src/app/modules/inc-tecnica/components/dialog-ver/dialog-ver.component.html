@@ -1,48 +1,57 @@
 <div class="dialog">
     <div class="dialog-header">
-        <h2>Detalles de la Incidencia Tecnica</h2>
+        <h2>Detalles de la Incidencia General</h2>
         <button class="btn-cerrar" (click)="cerrar()">&times;</button>
     </div>
 
     <div class="dialog-body">
         <div class="campo-grupo">
-            <label>ID de Incidencia Tecnica</label>
-            <input type="text" value="#001" disabled>
+            <label>ID de Incidencia General</label>
+            <input type="text" [value]="data.incidencia.codigoIncidencia" disabled>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Titulo Incidencia</label>
+            <input type="text" [value]="data.incidencia.titulo" disabled>
         </div>
 
         <div class="campo-grupo">
             <label>Descripción</label>
-            <textarea disabled>Problema con el servidor principal que impide el acceso a los usuarios del sistema</textarea>
+            <textarea disabled>{{data.incidencia.descripcion}}</textarea>
         </div>
 
         <div class="campo-grupo">
-            <label>Fecha de Creación</label>
-            <input type="text" value="22/11/2025" disabled>
+            <label>Codigo Maquina</label>
+            <input type="text" [value]="data.incidencia.codigoMaquina" disabled>
+        </div>
+
+        <div class="campo-grupo">
+            <label>Fecha Creacion</label>
+            <input type="text" [value]="data.incidencia.fechaCreacion" disabled>
         </div>
 
         <div class="campo-grupo">
             <label>Estado de la Incidencia</label>
-            <select disabled>
-                <option>Activo</option>
-            </select>
+            <input type="text" [value]="data.incidencia.estadoIncidencia" disabled>
         </div>
 
         <div class="campo-grupo">
-            <label>Usuario Reportante</label>
-            <input type="text" value="Juan Pérez" disabled>
+            <label>Imagenes de la Incidencia</label>
+            <input type="text" [value]="data.incidencia.imagenes" disabled>
+        </div>
+
+        <hr><br>
+
+        <div class="campo-grupo">
+            <label>Fecha Finalizacion Incidencia</label>
+            <input type="text" [value]="data.incidencia.fechaFinalizacion" disabled>
         </div>
 
         <div class="campo-grupo">
-            <label>Prioridad</label>
-            <select disabled>
-                <option>Alta</option>
-            </select>
+            <label>Descripcion de la Solucion</label>
+            <input type="text" [value]="data.incidencia.descripcionSolucion" disabled>
         </div>
 
-        <div class="campo-grupo">
-            <label>Categoría</label>
-            <input type="text" value="Infraestructura / Servidores" disabled>
-        </div>
     </div>
 
     <div class="dialog-footer">

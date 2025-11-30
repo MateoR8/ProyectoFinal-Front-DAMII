@@ -5,6 +5,7 @@ import { DialogEliminarComponent } from './components/dialog-eliminar/dialog-eli
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { IncGeneralComponent } from './inc-general.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { IncGeneralComponent } from './inc-general.component';
   imports: [
     CommonModule,
     MatDialogModule,
-    MatButtonModule
-  ]
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
+]
 })
 export class IncGeneralModule { }
