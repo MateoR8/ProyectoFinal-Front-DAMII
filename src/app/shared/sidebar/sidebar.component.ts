@@ -9,6 +9,7 @@ import { RouterLink } from '@angular/router';
 export class SidebarComponent {
 
   cerrarSession() {
+    localStorage.clear();
     window.location.href = '/login';
   }
 

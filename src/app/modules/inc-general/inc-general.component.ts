@@ -17,7 +17,6 @@ export class IncGeneralComponent implements OnInit {
   ngOnInit(): void {
     this.service.getIncGeneralData().subscribe(data => {
       this.incidenciasGeneral = data;
-      console.log(this.incidenciasGeneral);
     });
   }
 

@@ -47,6 +47,7 @@ export class LoginComponent {
     this.router.navigate(['/inc-general']);
     } else {
       alert('Acceso denegado. Solo los administradores pueden iniciar sesión.');
+      localStorage.clear();
       this.router.navigate(['/login']);
     }
   }
