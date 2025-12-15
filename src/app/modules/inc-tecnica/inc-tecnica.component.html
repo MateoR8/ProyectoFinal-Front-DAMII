@@ -1,31 +1,33 @@
 <div class="contenedor">
-    <h1>Incidencias Técnicas</h1>
-    <div class="table">
-        <table>
-            <thead>
-                <tr>
-                    <th> Codigo </th>
-                    <th> Titulo </th>
-                    <th> Descripción </th>
-                    <th> Fecha Creacion</th>
-                    <th> Estado Incidencia </th>
-                    <th> Acciones </th>
-                </tr>
-            </thead>
-            <tbody id="tablaIncidencias">
-                <tr>
-                <tr *ngFor="let incidencia of incidenciasTecnica">
-                    <td>{{incidencia.codigoIncidencia}}</td>
-                    <td>{{incidencia.titulo}}</td>
-                    <td>{{incidencia.descripcion}}</td>
-                    <td>{{incidencia.fechaCreacion}}</td>
-                    <td>{{incidencia.estadoIncidencia}}</td>
-                    <td class="acciones">
-                        <button class="btn-editar" (click)="abrirVisualizar(incidencia)">Ver</button>
-                        <button class="btn-eliminar" (click)="abrirEliminar(incidencia)">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+  <h1>Incidencias Técnicas</h1>
+  <div class="table">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+        <tr>
+          <th> Codigo</th>
+          <th> Titulo</th>
+          <th> Descripción</th>
+          <th> Fecha Creacion</th>
+          <th> Estado Incidencia</th>
+          <th> Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="tablaIncidencias">
+        <tr>
+        <tr *ngFor="let incidencia of incidenciasTecnica">
+          <td>{{ incidencia.codigoIncidencia }}</td>
+          <td>{{ incidencia.titulo }}</td>
+          <td>{{ incidencia.descripcion }}</td>
+          <td>{{ incidencia.fechaCreacion }}</td>
+          <td>{{ incidencia.estadoIncidencia }}</td>
+          <td class="acciones">
+            <button class="btn-editar" (click)="abrirVisualizar(incidencia)">Ver</button>
+            <button class="btn-eliminar" (click)="abrirEliminar(incidencia)">Eliminar</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogVerComponent } from './components/dialog-ver/dialog-ver.component';
-import { DialogEliminarComponent } from './components/dialog-eliminar/dialog-eliminar.component';
-import { IncGeneralService } from './service/inc-general.service';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {DialogVerComponent} from './components/dialog-ver/dialog-ver.component';
+import {DialogEliminarComponent} from './components/dialog-eliminar/dialog-eliminar.component';
+import {IncGeneralService} from './service/inc-general.service';
 
 @Component({
   selector: 'app-inc-general',
@@ -12,11 +12,16 @@ import { IncGeneralService } from './service/inc-general.service';
 export class IncGeneralComponent implements OnInit {
   incidenciasGeneral: any[] = [];
 
-  constructor(private dialog: MatDialog, private service: IncGeneralService) { }
+  constructor(private dialog: MatDialog, private service: IncGeneralService) {
+  }
 
   ngOnInit(): void {
     this.service.getIncGeneralData().subscribe(data => {
-      this.incidenciasGeneral = data;
+      this.incidenciasGeneral = data.sort((a, b) => {
+        const numA = Number(a.codigoIncidencia.split('-')[1]);
+        const numB = Number(b.codigoIncidencia.split('-')[1]);
+        return numA - numB;
+      });
     });
   }
 
@@ -24,7 +29,7 @@ export class IncGeneralComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogVerComponent, {
       width: '600px',
       panelClass: 'custom-dialog',
-      data: { incidencia: incidencia }
+      data: {incidencia: incidencia}
     });
   }
 
@@ -32,7 +37,7 @@ export class IncGeneralComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogEliminarComponent, {
       width: '600px',
       panelClass: 'custom-dialog',
-      data: { incidencia: incidencia }
+      data: {incidencia: incidencia}
     });
   }
 }

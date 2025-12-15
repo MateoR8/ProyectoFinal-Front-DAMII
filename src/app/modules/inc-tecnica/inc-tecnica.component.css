@@ -1,126 +1,135 @@
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- .contenedor {
-     max-width: 100%;
-     background: rgba(255, 255, 255, 0.95);
-     border-radius: 20px;
-     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-     padding: 20px;
- }
+.contenedor {
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
 
- h1 {
-     color: #2d3748;
-     font-size: 2.5rem;
-     margin-bottom: 2rem;
-     text-align: center;
-     background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 100%);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     background-clip: text;
- }
+h1 {
+  color: #2d3748;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
- .table {
-     overflow-x: auto;
-     border-radius: 12px;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
+.table {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
- table {
-     width: 100%;
-     border-collapse: collapse;
-     background: white;
- }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
 
- thead {
-     background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 100%);
- }
+.table-wrapper {
+  max-height: 84vh;
+  overflow-y: auto;
+}
 
- thead th {
-     color: white;
-     padding: 1.2rem 1rem;
-     text-align: center;
-     font-weight: 600;
-     font-size: 0.95rem;
-     text-transform: uppercase;
-     letter-spacing: 0.5px;
- }
+thead {
+  background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 100%);
+}
 
- tbody tr {
-     border-bottom: 1px solid #e2e8f0;
-     transition: all 0.3s ease;
- }
+thead th {
+  color: white;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 100%);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 
- tbody tr:last-child {
-     border-bottom: none;
- }
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
 
- td {
-     padding: 1.2rem 1rem;
-     color: #4a5568;
-     font-size: 0.95rem;
-     text-align: center;
- }
+tbody tr:last-child {
+  border-bottom: none;
+}
 
- .acciones {
-     display: flex;
-     gap: 0.5rem;
-     justify-content: center;
- }
+td {
+  padding: 1.2rem 1rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  text-align: center;
+}
 
- button {
-     padding: 0.5rem 1.2rem;
-     border: none;
-     border-radius: 8px;
-     font-weight: 600;
-     font-size: 0.85rem;
-     cursor: pointer;
-     transition: all 0.3s ease;
-     text-transform: uppercase;
-     letter-spacing: 0.5px;
- }
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
 
- .btn-editar {
-     background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
-     color: white;
- }
+button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
- .btn-editar:hover {
-     transform: translateY(-2px);
-     box-shadow: 0 6px 12px rgba(66, 153, 225, 0.4);
- }
+.btn-editar {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+}
 
- .btn-eliminar {
-     background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
-     color: white;
- }
+.btn-editar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(66, 153, 225, 0.4);
+}
 
- .btn-eliminar:hover {
-     transform: translateY(-2px);
-     box-shadow: 0 6px 12px rgba(245, 101, 101, 0.4);
- }
+.btn-eliminar {
+  background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+  color: white;
+}
 
- @media (max-width: 768px) {
-     .contenedor {
-         padding: 1.5rem;
-     }
+.btn-eliminar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(245, 101, 101, 0.4);
+}
 
-     h1 {
-         font-size: 1.8rem;
-     }
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 1.5rem;
+  }
 
-     table {
-         font-size: 0.85rem;
-     }
+  h1 {
+    font-size: 1.8rem;
+  }
 
-     .acciones {
-         flex-direction: column;
-     }
+  table {
+    font-size: 0.85rem;
+  }
 
-     button {
-         width: 100%;
-     }
- }
+  .acciones {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

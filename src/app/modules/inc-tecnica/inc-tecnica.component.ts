@@ -11,13 +11,16 @@ import { IncTecnicaService } from './service/inc-tecnica.service';
 })
 export class IncTecnicaComponent implements OnInit {
   incidenciasTecnica: any[] = [];
-  
+
   constructor(private dialog: MatDialog, private service: IncTecnicaService) { }
 
   ngOnInit(): void {
     this.service.getIncTecnicaData().subscribe(data => {
-      this.incidenciasTecnica = data;
-      console.log(this.incidenciasTecnica);
+      this.incidenciasTecnica = data.sort((a, b) => {
+        const numA = Number(a.codigoIncidencia.split('-')[1]);
+        const numB = Number(b.codigoIncidencia.split('-')[1]);
+        return numA - numB;
+      });
     });
   }
 

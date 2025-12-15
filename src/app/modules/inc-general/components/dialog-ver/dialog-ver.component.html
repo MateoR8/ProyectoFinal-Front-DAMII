@@ -34,12 +34,12 @@
 
         <div class="campo-grupo">
             <label>Fecha Finalizacion Incidencia</label>
-            <input type="text" [value]="data.incidencia.fechaFinalizacion" disabled>
+          <input type="text" [value]="data.incidencia.fechaFinalizacion ? data.incidencia.fechaFinalizacion : 'Aún no finalizada'" disabled >
         </div>
 
         <div class="campo-grupo">
             <label>Descripcion de la Solucion</label>
-            <input type="text" [value]="data.incidencia.descripcionSolucion" disabled>
+          <input type="text" [value]="data.incidencia.descripcionSolucion ? data.incidencia.descripcionSolucion : 'Incidencia aun no finalizada'" disabled>
         </div>
 
     </div>
