@@ -8,8 +8,8 @@
           <th> Codigo</th>
           <th> Titulo</th>
           <th> Descripción</th>
-          <th> Fecha Creacion</th>
           <th> Estado Incidencia</th>
+          <th> Duracion Incidencia</th>
           <th> Acciones</th>
         </tr>
         </thead>
@@ -18,8 +18,9 @@
           <td>{{ incidencia.codigoIncidencia }}</td>
           <td>{{ incidencia.titulo }}</td>
           <td>{{ incidencia.descripcion }}</td>
-          <td>{{ incidencia.fechaCreacion }}</td>
-          <td>{{ incidencia.estadoIncidencia }}</td>
+          <td [ngClass]="{'estado-finalizado': incidencia.estadoIncidencia === 'Finalizado'}">
+            {{ incidencia.estadoIncidencia }}</td>
+          <td>{{ incidencia.duracionMinutos }}</td>
           <td class="acciones">
             <button class="btn-editar" (click)="abrirVisualizar(incidencia)">Ver</button>
             <button class="btn-eliminar" (click)="abrirEliminar(incidencia)">Eliminar</button>

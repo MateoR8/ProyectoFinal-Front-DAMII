@@ -133,3 +133,8 @@ button {
     width: 100%;
   }
 }
+
+.estado-finalizado {
+  color: red;
+  font-weight: bold; /* opcional, para resaltar más */
+}

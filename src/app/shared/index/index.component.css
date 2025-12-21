@@ -18,6 +18,7 @@ app-sidebar {
 }
 
 .content {
+  overflow: hidden;
   margin-left: 280px;
   padding: 30px 40px;
   flex: 1;
